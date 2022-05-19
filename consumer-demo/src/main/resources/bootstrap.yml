@@ -1,0 +1,27 @@
+server:
+  port: 18083
+spring:
+  application:
+    name: consumer-demo
+  cloud:
+    consul:
+#      不起作用
+#      discovery:
+#        enabled: false
+#        register: false
+#        fail-fast: false
+#        catalogServicesWatch:
+#          enabled: false
+      config:
+        enabled: false
+        fail-fast: false
+        watch:
+          enabled: false
+    discovery:
+      enabled: false
+
+tsf:
+  discovery:
+    register: false
+    catalog-services-watch:
+      enabled: false
