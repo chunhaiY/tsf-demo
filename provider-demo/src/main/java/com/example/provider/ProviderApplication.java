@@ -2,10 +2,12 @@ package com.example.provider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.tsf.annotation.EnableTsf;
+import org.springframework.tsf.auth.annotation.EnableTsfAuth;
 
+@EnableTsf
 @SpringBootApplication
-@EnableDiscoveryClient
+@EnableTsfAuth
 public class ProviderApplication {
 
     public static void main(String[] args) {

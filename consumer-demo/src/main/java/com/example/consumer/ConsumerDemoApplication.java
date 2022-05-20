@@ -7,11 +7,12 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
+import org.springframework.tsf.annotation.EnableTsf;
 import org.springframework.web.client.AsyncRestTemplate;
 import org.springframework.web.client.RestTemplate;
 
+@EnableTsf
 @SpringBootApplication
-@EnableDiscoveryClient
 @EnableFeignClients
 public class ConsumerDemoApplication {
 
