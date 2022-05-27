@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/tsfuser")
@@ -24,6 +26,19 @@ public class TsfUserController {
 
     @Autowired
     ProviderUserService providerUserService;
+
+
+    @GetMapping("/unionlist")
+    public Map unionlist() {
+        Map map = new HashMap();
+
+        List<TsfUser> list = tsfUserService.lambdaQuery().list();
+        List<Map> list1 = providerUserService.list();
+
+        map.put("consumer", list);
+        map.put("provider", list1);
+        return map;
+    }
 
 
     @GetMapping("/list")
