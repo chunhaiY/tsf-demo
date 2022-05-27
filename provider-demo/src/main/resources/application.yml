@@ -4,9 +4,9 @@ spring:
   application:
     name: provider-demo
   datasource:
-    url: jdbc:mysql://150.158.165.32:3306/tsf?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
-    username: tsf
-    password: tsf
+    url: jdbc:mysql://150.158.165.32:3306/tsf_provider?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: tsf_provider
+    password: tsf_provider
     driver-class-name: com.mysql.jdbc.Driver
   redis:
     host: 150.158.165.32
